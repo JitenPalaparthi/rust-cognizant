@@ -29,3 +29,4 @@ fn calc_area_perimeter(l:f32,b:f32)->(f64,f64){
 
 // collection of values os same type or different type are grouple together , we call it touple 
 // write a simple function, to take two values a,b and return (add,sub,mul,divide) as a touple
+// fn calc(a:f32,b:f32)->(f32,f32,f32,f32);
