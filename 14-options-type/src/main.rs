@@ -9,6 +9,25 @@ fn main() {
    num1 = Some(100);
    println!("num1, get_default:{}",get_or(num1,200));
 
+  // let num1:Option<i32>= None;
+
+  // let n1 = num1.unwrap(); // unwrap returns the value only if there is Some, if there is None, it panics
+
+
+  let num2: Option<i32> = Some(101);
+
+    match num2{
+        Some(v) if v%2==0=>{
+            println!("{} is some and also even number",v);
+        },
+        Some(v) if v%2 !=0=>{
+            println!("{} is some and also odd number",v);
+        },
+        None =>{
+            println!("It is None, so cant say even or odd.There is nothing.")
+        },
+        _=>{}
+    }
 
 }
 
