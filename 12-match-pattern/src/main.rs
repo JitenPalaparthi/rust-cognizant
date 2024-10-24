@@ -39,3 +39,5 @@ fn main() {
 // There is no null in rust
 // Excepting handling is different in rust. Errors are just values
 // 
+
+
