@@ -36,6 +36,20 @@ fn main() {
     let d4 = divide2(10.12, 1.2).expect("as value does not come, it panics");
     println!("divide:{:.2}", d4);
     // the above code panics
+
+    let ap1 = get_area_perimeter(12.12,13.45);
+
+    match ap1{
+        Ok((a,p))=>{
+            println!("Area:{:.2} Perimeter:{:.2}",a,p);
+        }
+        Err(s)=>{
+            println!("Error:{} ", s)
+        }
+    }
+
+
+
 }
 
 fn divide1(a: f64, b: f64) -> f64 {
@@ -49,3 +63,13 @@ fn divide2(a: f64, b: f64) -> Result<f64, String> {
         Ok(a / b)
     }
 }
+
+
+fn get_area_perimeter(l: f64, b: f64) -> Result<(f64,f64), String> {
+    if l ==0.0 || b == 0.0{
+        Err(String::from("l or b cannot be zero"))
+    }else{
+        Ok((l*b,2.0*(l+b)))
+    }
+}
+
