@@ -5,7 +5,7 @@ fn main() {
     // println!("address of k1:{:p}",k1);
 
     let mut num1: Option<i32> = Some(100);
-    let mut num2:Option<i32>= Some(30);
+    let mut num2: Option<i32>= Some(30);
 
     
     //let sum = num1 + num2;
