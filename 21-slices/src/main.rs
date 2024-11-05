@@ -41,6 +41,15 @@ fn main() {
     let sum3= sumOfs(slice1);
 
     let sum4 = sumOfs(slice2);
+
+
+    let mut arr3 = [1,2,3,4,5,6];
+
+    let mut slice1 = &mut arr3[..];
+    println!("slice1:{:?}",slice1);
+    double_slice(slice1);
+    println!("slice1:{:?}",&mut slice1);
+
 }
 
 fn sumOf(arr: [i32; 5]) -> i32 {
@@ -57,6 +66,13 @@ fn sumOfs(arr: &[i32]) -> i32 {
         sum += i;
     }
     sum
+}
+
+
+fn double_slice(slice:&mut [i32]){
+    for i in slice{
+        *i = *i + *i;
+    }
 }
 
 // create a program to take string as a argument and return the length of the string 
