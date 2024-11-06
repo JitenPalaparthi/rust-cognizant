@@ -17,7 +17,7 @@ fn main() {
     println!("slice5:{:?}", slice5); // elements from 0th to 6th but not 6th
 
     {
-        let slice6 = &arr1; // technically this is not a slice
+        let slice6 = &arr1; // technically this is not a slice+
         println!("slice6:{:?}", slice6);
     }
     println!("arr1:{:?}", arr1);
