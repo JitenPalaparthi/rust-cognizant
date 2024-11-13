@@ -11,6 +11,7 @@ fn main() {
     let p1 = r1.perimeter_of();
     println!("Area of Rect r1:{:.2}",a1); // only prints two digits after .
     println!("Perimeter of Rect r1:{}",p1);
+    Rect::what(); // it is a function
 }
 
 #[derive(Debug)] // this helps you to print the debug print
@@ -22,6 +23,10 @@ struct Rect{
 }
 
 impl Rect{
+    fn what(){
+        println!("This is a Rect");
+    }
+    
     fn area_of(&mut self)->f32{
         self.area=self.length * self.bredth;
         self.area
