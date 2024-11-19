@@ -1,6 +1,22 @@
-use std::clone;
+use std::{clone, fmt::format};
+
+//type int = i32; // not creating a new type instead aliasing an existing type
+
+
+struct int(i32);
+
+impl int{
+    fn to_a_string(&self)->String{
+        format!("{}",self.0)
+    }
+}
 
 fn main() {
+
+    let i1 = int(100);
+   let s1= i1.to_a_string();
+   println!("{}",s1);
+    //et l1:int = 10;
 
     let r1 = Rect::new(10.1223123, 12.12);
     
@@ -73,3 +89,4 @@ impl Rect{
 // 12.123123342342342
 
 // into and from traits
+
