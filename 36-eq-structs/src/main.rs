@@ -26,7 +26,7 @@ fn main() {
     println!("{:?}",r1);
 
     let s1 = String::new();
-    s1.into()
+    //s1.into()
     
 }
 
