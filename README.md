@@ -19,3 +19,10 @@ cargo build
 ```
 cargo build --release
 ```
+
+- Youtube link for static vs dynamic dispatch
+
+https://youtu.be/uK1NC6ESRUo
+
+- Presentation for static vs dynamic dispatch
+- https://docs.google.com/presentation/d/1LKeMS6NBJdaaEBeSmD7tKCmpb-iMrhf7uoeFJjODaSA/edit?usp=sharing

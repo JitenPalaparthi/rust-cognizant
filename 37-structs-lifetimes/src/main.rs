@@ -56,3 +56,24 @@ impl<'a> Student<'a>{
         println!("status: {}",self.status);
     }
 }
+
+// traits
+// implementing traints
+// impl and dyn 
+// implementing multiple traits
+
+// package management and library traits
+
+// closures and threads
+
+// smart pointers
+
+// restful services (actix-web)
+
+// dockerizing restful service 
+
+// deploying the service in a kubernetes instance
+
+// deploying a service as a lamda
+
+// tokio async and await runtime
