@@ -13,7 +13,7 @@ impl int{
 
 fn main() {
 
-    let i1 = int(100);
+let i1 = int(100);
    let s1= i1.to_a_string();
    println!("{}",s1);
     //et l1:int = 10;
