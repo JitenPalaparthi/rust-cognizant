@@ -20,7 +20,6 @@ fn main() {
   call_shape_generic2(&r1);
   call_shape_generic2(&s1);
 
-
   //call_shape(k1);
 }
 
@@ -117,3 +116,6 @@ impl shape for Square{
 // create new function for all thoses and create a general function called talk(ITalk) 
 // add generic type of implementation
 // impl vs dyn
+
+
+
