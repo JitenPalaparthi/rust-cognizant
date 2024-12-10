@@ -39,3 +39,9 @@ https://youtu.be/uK1NC6ESRUo
 - Do you think that you can achieve parallelism ? 
 
 
+- two kids of project, call it as a crate 
+- binary create 
+- library crate
+
+- what is a crate?
+
