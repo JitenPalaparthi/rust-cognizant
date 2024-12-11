@@ -18,7 +18,9 @@ autobins = false
 autoexamples = false
 autotests = false
 autobenches = false
+description = "package for demo purpose"
 readme = false
+license = "MIT"
 
 [lib]
 name = "my_shapes"

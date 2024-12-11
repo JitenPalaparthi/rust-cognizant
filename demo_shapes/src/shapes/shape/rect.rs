@@ -1,3 +1,7 @@
+use crate::shapes::shape::square;
+
+use super::square::why;
+
 
 #[derive(Debug)]
 pub struct Rect {
@@ -25,4 +29,17 @@ impl super::IShape for Rect{
     fn what(&self)->String {
         return "Rect".to_string();
     }
+}
+
+pub fn whyr(){
+   //use super::square::why;
+  // use crate::shapes::shape::why;
+  // use super::why;
+  //  why();
+  //use super::super::super::greetings::Greet;
+  use crate::greetings::Greet;
+  Greet("Hello World");
+  square::why();
+  super::square::why();
+  super::super::super::shapes::shape::square::why();
 }

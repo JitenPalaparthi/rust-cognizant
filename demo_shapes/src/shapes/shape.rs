@@ -7,3 +7,7 @@ pub trait IShape {
      fn perimeter(&self)->f32;
      fn what(&self)->String;
 }
+
+pub fn why(){
+     println!("Just to check how this work");
+ }

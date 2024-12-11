@@ -17,3 +17,7 @@ impl super::IShape for Square{
        return "Square".to_string();
    }
 }
+
+pub fn why(){
+    println!("Just to check how this work");
+}

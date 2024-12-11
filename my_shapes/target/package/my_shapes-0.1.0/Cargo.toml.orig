@@ -2,5 +2,7 @@
 name = "my_shapes"
 version = "0.1.0"
 edition = "2021"
+description = "package for demo purpose"
+license = "MIT"
 
 [dependencies]

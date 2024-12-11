@@ -1,0 +1,8 @@
+[package]
+name = "my_shapes_consumer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+my_shapes = "0.1.0"
+

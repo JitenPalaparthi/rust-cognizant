@@ -28,6 +28,23 @@ https://youtu.be/uK1NC6ESRUo
 - https://docs.google.com/presentation/d/1LKeMS6NBJdaaEBeSmD7tKCmpb-iMrhf7uoeFJjODaSA/edit?usp=sharing
 
 
+### cargo 
+
+- check is everything okay
+```cargo check```
+
+- clippy is a linter, check all the conventions of rust
+```cargo clippy```
+
+- cargo package is used to make sure that the package has no issues
+```cargo package```
+
+- cargo login , get the token from crates.io
+```cargo login <token>``` 
+
+- publish to the crates.io, before that push all code to the github.com or similar
+```cargo publish```
+
 ### Threading 
 
 - 12 core processor hardware (12 threads)
