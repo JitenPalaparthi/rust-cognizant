@@ -22,3 +22,10 @@ docker run --name dbui -p 8089:8080 -d adminer
     updated_at BIGINT DEFAULT EXTRACT(EPOCH FROM CURRENT_TIMESTAMP)::BIGINT
 );
 ```
+
+
+-- To run docker command
+
+```
+docker build . -t jpalaparthi/my_app:v0.1
+```
