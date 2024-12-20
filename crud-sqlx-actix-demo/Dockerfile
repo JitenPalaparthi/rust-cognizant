@@ -1,35 +1,49 @@
-# Step 1: Build the Rust Application
+# Use the official Rust image as the base image for building the app
 FROM rust:1.81 as builder
 
-# Create and set the working directory
-WORKDIR /app
+# Set the working directory for the app
+WORKDIR /usr/src/app
 
-# Copy the Cargo.toml and Cargo.lock to leverage Docker cache
-COPY Cargo.toml Cargo.lock ./
+# # Copy the Cargo.toml and Cargo.lock files to the container
+# COPY Cargo.toml Cargo.lock ./
 
-# Build dependencies first to cache them
-# RUN cargo build --release && rm -f target/release/deps/my_project*
+# # Create a build-only dummy file to cache dependencies
+# RUN touch src/main.rs
 
-# Copy the rest of the application code
+# # Build the dependencies and cache them
+# RUN cargo build --release
+
+# Now copy the actual source code
 COPY . .
 
-# Build the final release binary
+# Build the app in release mode
 RUN cargo build --release
 
-# Step 2: Set up the final image
-FROM debian:bullseye-slim
+# Use the same base image for runtime
+FROM rust:1.81-slim
 
 # Install necessary dependencies
 RUN apt-get update && apt-get install -y \
+    libssl-dev \
     libpq-dev \
-    ca-certificates \
-    && rm -rf /var/lib/apt/lists/*
+    ca-certificates && \
+    rm -rf /var/lib/apt/lists/*
 
-# Copy the binary from the builder stage
-COPY --from=builder /app/target/release/my_app /usr/local/bin/my_app
+# Create a user to run the application
+RUN groupadd -g 1000 appuser && \
+    useradd -m -u 1000 -g appuser appuser
 
-# Expose the port the application will run on
+# Copy the built binary from the builder stage
+COPY --from=builder /usr/src/app/target/release/my_app /usr/local/bin/my_app
+
+# Set the working directory for the app
+WORKDIR /usr/src/app
+
+# Switch to a non-root user
+USER appuser
+
+# Expose the port that the Actix Web application will run on
 EXPOSE 8084
 
-# Set the command to run the application
+# Command to run the application
 CMD ["my_app"]

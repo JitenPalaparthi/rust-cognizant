@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: actix-web-app
+  namespace: actix-web-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: actix-web-app
+  template:
+    metadata:
+      labels:
+        app: actix-web-app
+    spec:
+      containers:
+      - name: actix-web-app
+        image: jpalaparthi/http-demo:v0.1 # Replace this with the actual Docker image name (e.g., actix-web-app:latest)
+        ports:
+        - containerPort: 8087
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "500m"
+          limits:
+            memory: "256Mi"
+            cpu: "1"
+        env:
+          - name: RUST_LOG
+            value: "info" # Optional: Set logging level

@@ -1,0 +1,6 @@
+curl --location 'localhost:8084/foods' \
+--header 'Content-Type: application/json' \
+--data '{
+    "name":"chocolate cake",
+    "description":"chocalate cake, made with choco"
+}'
